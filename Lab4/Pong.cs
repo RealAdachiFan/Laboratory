@@ -100,7 +100,7 @@ namespace PongGame
     // ==========================================
 public class Score
 {
-    // Исправлено: добавлен знак вопроса '?'
+    
     public event Action<int, int>? OnScoreChanged; 
 
     public int PlayerScore { get; private set; }
@@ -118,7 +118,7 @@ public class Score
         NotifyObservers();
     }
     
-    // (Добавьте методы Reset и NotifyObservers, если их еще нет)
+   
     public void Reset() { PlayerScore = 0; AiScore = 0; NotifyObservers(); }
 
     private void NotifyObservers()
