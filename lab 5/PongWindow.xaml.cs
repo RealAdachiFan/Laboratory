@@ -66,7 +66,7 @@ namespace PongGame
             try
             {
                 int highScore = await _service.LoadHighScoreAsync();
-                // Обновляем текст счета, добавляя рекорд
+                
                 ScoreText.Text = $"Игрок: 0 | Компьютер: 0 | Рекорд: {highScore}";
             }
             catch (Exception ex)
@@ -76,8 +76,7 @@ namespace PongGame
         }
 
         // Метод обновления UI при изменении счета
-        // Исправляет ошибку: "The name 'UpdateScoreUi' does not exist"
-        private void UpdateScoreUi(int playerScore, int aiScore)
+              private void UpdateScoreUi(int playerScore, int aiScore)
         {
             // Получаем текущий рекорд из текста (или просто 0 для простоты)
             // В более сложном приложении лучше хранить рекорд в переменной
@@ -152,7 +151,6 @@ namespace PongGame
         }
 
         // Метод отрисовки (перевод координат игры в координаты экрана)
-        // Исправляет ошибку: "The name 'Render' does not exist"
         private void Render()
         {
             if (_game == null) return;
